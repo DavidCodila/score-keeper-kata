@@ -30,6 +30,8 @@ export class ScoreKeeper {
     return this.teamB;
   }
   getScore(): string {
-    return "";
+    const teamAScorePadded = String(this.teamA).padStart(3, "0");
+    const teamBScorePadded = String(this.teamB).padStart(3, "0");
+    return teamAScorePadded + ":" + teamBScorePadded;
   }
 }
